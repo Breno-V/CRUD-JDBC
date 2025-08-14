@@ -13,7 +13,7 @@ public class ProdutoDAO {
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
             stmt.executeUpdate();
-            System.err.println("Produto inserido com sucesso!");
+            System.out.println("Produto inserido com sucesso!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +38,7 @@ public class ProdutoDAO {
     }
 
     public void atualizar(Produto produto) {
-        String comandoSql = "UPDATE produtos SET nome=?, preco=?, WHERE id=?";
+        String comandoSql = "UPDATE produtos SET nome=?, preco=? WHERE id=?";
 
         try(Connection connection = Conexao.conectar(); PreparedStatement stmt = connection.prepareStatement(comandoSql)) {
             stmt.setString(1, produto.getNome());
