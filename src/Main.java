@@ -1,10 +1,5 @@
 import java.util.*;
 
-/*Para conseguir executar o código, é necessário que você utilize o seguinte comando na pasta CRUD-JDBC:
- * - java -cp "src;lib/mysql-connector-j-9.4.0.jar" Main
- * estou indicando ao java para executar o arquivo main no seguinte caminho (classPath, ou cp): src/Main.class 
- * e o lib/mysql-connector-j-9.4.0.jar é necessário para a conexão do BD com o código
- */
 public class Main {
     public static void main(String[] args) throws Exception {
         ProdutoDAO dao = new ProdutoDAO();
