@@ -15,6 +15,7 @@ public class ProdutoDAO {
             stmt.executeUpdate();
             System.out.println("Produto inserido com sucesso!");
         } catch (SQLException e) {
+            System.out.println("Não foi possível inserir o produto!");
             e.printStackTrace();
         }
     }
@@ -32,6 +33,7 @@ public class ProdutoDAO {
                 lista.add(produto);
             }
         } catch(SQLException e) {
+            System.out.println("Não foi possível listar os produtos disponíveis!");
             e.printStackTrace();
         }
         return lista;
@@ -48,6 +50,7 @@ public class ProdutoDAO {
 
             System.out.println("Produto atualizado com sucesso!");
         } catch (SQLException e){
+            System.out.println("Não foi possível atualizar o produto!");
             e.printStackTrace();
         }
     }
@@ -62,6 +65,7 @@ public class ProdutoDAO {
 
             System.out.println("Produto deletado com sucesso!");
         }catch(SQLException e){
+            System.out.println("Não foi possível deletar esse produto!");
             e.printStackTrace();
         }
     }
