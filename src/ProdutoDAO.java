@@ -13,7 +13,6 @@ public class ProdutoDAO {
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
             stmt.executeUpdate();
-            System.out.println("Produto inserido com sucesso!");
         } catch (SQLException e) {
             System.out.println("Não foi possível inserir o produto!");
             e.printStackTrace();
@@ -48,7 +47,6 @@ public class ProdutoDAO {
             stmt.setInt(3, produto.getId());
             stmt.executeUpdate();
 
-            System.out.println("Produto atualizado com sucesso!");
         } catch (SQLException e){
             System.out.println("Não foi possível atualizar o produto!");
             e.printStackTrace();
@@ -63,7 +61,6 @@ public class ProdutoDAO {
             stmt.setInt(1, id);
             stmt.executeUpdate();
 
-            System.out.println("Produto deletado com sucesso!");
         }catch(SQLException e){
             System.out.println("Não foi possível deletar esse produto!");
             e.printStackTrace();
