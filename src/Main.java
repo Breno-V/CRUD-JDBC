@@ -58,6 +58,12 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("OPÇÃO ESCOLHIDA: DELETAR");
+                        for (Produto prod : dao.listar()) {
+                            System.out.println(
+                                    "ID: " + prod.getId() + " - " +
+                                            "NOME: " + prod.getNome() + " - PREÇO: R$" +
+                                            prod.getPreco() + "\n");
+                        }
                         System.out.print("Insira o ID do produto para deletá-lo: ");
                         id = scan.nextInt();
                         dao.deletar(id);
@@ -89,7 +95,7 @@ public class Main {
                     case 2:
                         for (Categoria cat : catDao.listar()) {
                             System.out.println(
-                                "ID: " +  cat.getId() + " - NOME: " +
+                                    "ID: " + cat.getId() + " - NOME: " +
                                             cat.getNome() + " - STATUS: " +
                                             cat.getAtivo() + "\n");
                         }
@@ -111,7 +117,13 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("OPÇÃO ESCOLHIDA: DELETAR\n");
-                        System.out.print("Insira o ID da categoria para deletá-la");
+                        for (Categoria cat : catDao.listar()) {
+                            System.out.println(
+                                    "ID: " + cat.getId() + " - NOME: " +
+                                            cat.getNome() + " - STATUS: " +
+                                            cat.getAtivo() + "\n");
+                        }
+                        System.out.print("Insira o ID da categoria para deletá-la: ");
                         id = scan.nextInt();
                         catDao.deletar(id);
                         System.out.println("CATEGORIA DELETADA COM SUCESSO");
