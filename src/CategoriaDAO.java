@@ -9,7 +9,6 @@ public class CategoriaDAO {
             stmt.setString(1, categoria.getNome());
             stmt.setString(2, categoria.getAtivo());
             stmt.executeUpdate();
-            System.out.println("Categoria inserida com sucesso!");
         } catch(SQLException e){
             System.out.println("Não foi possível inserir a categoria!");
             e.printStackTrace();
@@ -41,8 +40,6 @@ public class CategoriaDAO {
             stmt.setString(2, categoria.getAtivo());
             stmt.setInt(3, categoria.getId());
             stmt.executeUpdate();
-
-            System.out.println("Categoria atualizada com sucesso!");
             
         } catch (SQLException e) {
             System.out.println("Não foi possível atualizar a categoria!");
@@ -58,7 +55,6 @@ public class CategoriaDAO {
             stmt.setInt(1, id);
             stmt.executeUpdate();
 
-            System.out.println("Categoria deletada com sucesso!");
         }catch(SQLException e){
             System.out.println("Não foi possível deletar essa categoria!");
             e.printStackTrace();
