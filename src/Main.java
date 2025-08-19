@@ -86,8 +86,9 @@ public class Main {
                         System.out.println("OPÇÃO ESCOLHIDA: INSERIR");
                         System.out.print("Insira o nome: ");
                         String nome = scan.nextLine();
-                        System.out.print("Insira o status (Ativo = S, Inativo = N): ");
+                        System.out.print("Insira o status (Ativo ou Inativo): ");
                         String ativo = scan.nextLine();
+                        ativo = ativo.toLowerCase();
                         Categoria categoria = new Categoria(nome, ativo);
                         catDao.inserir(categoria);
                         System.out.println("CATEGORIA INSERIDA COM SUCESSO!");
