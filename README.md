@@ -25,6 +25,6 @@ java -cp "lib/*;." Main
 ## :key: Results
 |Code Working|DataBase in phpMyAdmin|
 |------------|----------------------|
-|            |                      |
+|![code-image](assets/images/code-working.png)            |![db-image](assets/images/database.png)                      |
 
 # Thanks for read until here, Bye! :wave:
