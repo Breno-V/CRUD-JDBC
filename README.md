@@ -22,9 +22,4 @@ java -cp "lib/*;." Main
 >java -cp "src;lib/mysql-connector-j-9.4.0.jar" Main
 >```
 
-## :key: Results
-|Code Working|DataBase in phpMyAdmin|
-|------------|----------------------|
-|![code-image](assets/images/code-working.png)            |![db-image](assets/images/database.png)                      |
-
 # Thanks for read until here, Bye! :wave:
